@@ -1,0 +1,29 @@
+# Ignore compiled binaries
+*.exe
+*.out
+*.o
+*.obj
+
+# Ignore build/ and bin/ directories (if you use them for compiled outputs)
+build/
+bin/
+
+# Ignore IDE and editor specific files
+.vscode/
+.idea/
+*.sln          # Visual Studio solution files
+*.vcxproj      # Visual Studio project files
+*.DS_Store     # macOS specific file
+Thumbs.db      # Windows specific file
+
+# Ignore system-specific files
+*.log          # Log files
+*.tmp          # Temporary files
+
+# Ignore personal configuration files
+*.swp          # Swap files (e.g., created by Vim)
+*.bak          # Backup files
+*~
+
+# Ignore libraries or dependencies (if applicable)
+lib/
