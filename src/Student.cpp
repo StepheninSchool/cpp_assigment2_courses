@@ -7,12 +7,12 @@ Student::Student() : numCourses(0), courseList(nullptr) {
     std::cout << "Default constructor called." << std::endl;
 }
 
-
+//SOURCE: https://en.cppreference.com/w/cpp/utility/move
 Student::Student(std::string studentName) : name(std::move(studentName)), numCourses(0), courseList(nullptr) {
     std::cout << "String constructor called." << std::endl;
 }
 
-
+// SOURCE: https://www.geeksforgeeks.org/new-and-delete-operators-in-cpp-for-dynamic-memory/
 Student::~Student() {
     if (courseList != nullptr) {
         delete[] courseList;
@@ -40,7 +40,8 @@ void Student::print() const {
     }
 }
 
-
+//SOURCE: https://www.geeksforgeeks.org/overloading-stream-insertion-operators-c/
+//
 std::ostream &operator<<(std::ostream &os, const Student &student) {
     os << "Student Name: " << student.getName() << "\n";
     os << "Number of Courses: " << student.getNumCourses() << "\n";
@@ -98,6 +99,7 @@ Student &Student::operator=(const Student &other) {
     return *this;
 }
 
+//SOURCE: https://www.geeksforgeeks.org/new-and-delete-operators-in-cpp-for-dynamic-memory/
 
 void Student::addCourse(const std::string &courseName) {
     std::cout << "Add course function called for " << getName() << std::endl;

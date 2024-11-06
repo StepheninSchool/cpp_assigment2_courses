@@ -38,7 +38,7 @@ public:
 
     void print() const;
 
-
+    //SOURCE: https://cplusplus.com/forum/beginner/95594/
     friend std::ostream &operator<<(std::ostream &os, const Student &student);
 
 
